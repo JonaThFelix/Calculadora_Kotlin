@@ -1,0 +1,66 @@
+<!-- esse é o arquivo activity_calculator.xml -->
+
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Aqui vou definir a tela de cálculo do IMC. -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalculatorActivity">
+
+    <!-- Campo de entrada para peso -->
+    <!-- inserir seu peso em kg. -->
+    <EditText
+        android:id="@+id/etWeight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Digite seu peso (kg)"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp" />
+
+    <!-- Campo de entrada para altura -->
+    <!-- inserir sua altura em metros. -->
+
+    <EditText
+        android:id="@+id/etHeight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Digite sua altura (m)"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@id/etWeight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp" />
+
+    <!-- Botão para calcular -->
+    <!-- Aciona o cálculo do IMC com base nos valores inseridos. -->
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calcular"
+        app:layout_constraintTop_toBottomOf="@id/etHeight"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Resultado do cálculo -->
+    <!-- Mostra o IMC calculado e sua classificação. -->
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Resultado aparecerá aqui"
+        android:textSize="16sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/btnCalculate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
